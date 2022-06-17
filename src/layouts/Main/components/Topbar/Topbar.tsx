@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from '@mui/material';
 import { NavItem } from './components';
 import TwitterIcon from '@mui/icons-material/Twitter';
-
+import Logo from '../../../assets/logo.svg';
 import './topbar.css';
 import { ThemeModeToggler } from '../../components';
 
@@ -41,9 +41,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
     blog: blogPages,
   } = pages;
 
-  const randomLogo = '../../../assets/ichigo_logo' + getRandomInt(22) + '.png';
-  const randomReversedLogo = '../../../assets/ichigo_logo' + getRandomInt(11) + '_reversed.png';
-
+  const logo = Logo;
 
   return (
     <Box
@@ -63,8 +61,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           component={'img'}
           src={
             (mode === 'light' && !colorInvert)
-              ? randomLogo
-              : randomReversedLogo
+              ? Logo
+              : Logo
           }
           height={1}
           width={1}
@@ -86,18 +84,29 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           <Link
             underline="none"
             component="a"
-            href="https://www.twitter.com/ichigopunksCNFT"
+            href="https://twitter.com/GoldBarGames_"
             color="primary.main"
             variant={'body1'}
             target="_blank"
             fontSize="large"
           >
-            <TwitterIcon fontSize="large"/>
+            <TwitterIcon fontSize="large"/> 
           </Link>
         </Box>   
         <Box marginLeft={3}>
           <ThemeModeToggler />
-        </Box>               
+        </Box>  
+        <Box marginLeft={3}>
+          <Button
+            aria-label="Menu"
+            variant={'contained'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+              padding: 2,
+            }}><b>CONNECT WALLET</b></Button>
+        </Box>         
+                             
       </Box>
       <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
        
@@ -105,18 +114,30 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           <Link
             underline="none"
             component="a"
-            href="https://www.twitter.com/ichigopunksCNFT"
+            href="https://twitter.com/GoldBarGames_"
             color="primary.main"
             variant={'body1'}
             target="_blank"
             fontSize="large"
           >
-            <TwitterIcon fontSize="large"/>
+            <TwitterIcon fontSize="large"/> 
           </Link>
         </Box>
         <Box marginRight={1}>
-          <ThemeModeToggler />
-        </Box>   
+          <ThemeModeToggler /> 
+        </Box> 
+         
+        <Box marginLeft={3}>
+          <Button
+            aria-label="Menu"
+            variant={'contained'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+              padding: 2,
+            }}><b>CONNECT WALLET</b></Button>
+        </Box>           
+        
         {/* <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"

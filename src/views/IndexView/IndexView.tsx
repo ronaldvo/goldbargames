@@ -5,11 +5,7 @@ import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
   IntroText,
-  Manga,
-  Founders,
-  Hero,
-  Story,
-  AboutBottom
+  Game
 } from './components';
 
 const IndexView = (): JSX.Element => {
@@ -28,26 +24,11 @@ const IndexView = (): JSX.Element => {
             position: 'relative',
           }}
         >
+
           <Container maxWidth={800}>
-            <IntroText />
-          </Container>
-          
-          <Container marginTop={-13}>
-            <Manga></Manga>
+            <Game />
           </Container>  
-          <Container>
-            <Hero></Hero>
-          </Container>  
-          {/* <Container>
-            <Story></Story>
-          </Container> */}
-          <Container>
-            <AboutBottom></AboutBottom>
-          </Container>
-          <Container>
-            <Founders></Founders>
-          </Container>            
-             
+
         </Box>
       </Main>
     </Box>

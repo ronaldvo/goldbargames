@@ -10,16 +10,16 @@ const getTheme = (mode: string, themeToggler: () => void): Theme =>
       shadows: shadows(mode),
       typography: {
         h1: {
-          fontFamily: '"Press Start 2P"',
+          fontFamily: '"Anek Malayalam"',
         },
         h2: {
-          fontFamily: '"Press Start 2P"',
+          fontFamily: '"Anek Malayalam"',
         },
         h3: {
-          fontFamily: '"Press Start 2P"',
+          fontFamily: '"Anek Malayalam"',
         },
         h4: {
-          fontFamily: '"Press Start 2P"',
+          fontFamily: '"Anek Malayalam"',
         },
         // h5: {
         //   fontFamily: '"Press Start 2P"',
@@ -27,7 +27,7 @@ const getTheme = (mode: string, themeToggler: () => void): Theme =>
         // h6: {
         //   fontFamily: '"Press Start 2P"',
         // },
-        fontFamily: 'Source Code Pro',
+        fontFamily: 'Anek Malayalam',
         button: {
           textTransform: 'none',
           fontWeight: 'medium' as React.CSSProperties['fontWeight'],

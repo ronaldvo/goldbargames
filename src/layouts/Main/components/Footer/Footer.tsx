@@ -6,8 +6,7 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import Logo from '../../../assets/ichigo_logo1.png';
-import LogoReversed from '../../../assets/ichigo_logo1_reversed.png';
+import Logo from '../../../assets/logo.svg';
 
 const Footer = (): JSX.Element => {
   const theme = useTheme();
@@ -35,7 +34,7 @@ const Footer = (): JSX.Element => {
               src={
                 mode === 'light'
                   ? Logo
-                  : LogoReversed
+                  : Logo
               }
               height={1}
               width={1}

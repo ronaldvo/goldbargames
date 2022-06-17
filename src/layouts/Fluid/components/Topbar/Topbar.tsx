@@ -8,8 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavItem, ThemeModeToggler } from './components';
 
 
-import Logo from '../../../assets/ichigo_logo1.png';
-import LogoReversed from '../../../assets/ichigo_logo1_reversed.png';
+import Logo from '../../../assets/logo.svg';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -55,7 +54,7 @@ const Topbar = ({ onSidebarOpen, pages }: Props): JSX.Element => {
           src={
             mode === 'light'
               ? Logo
-              : LogoReversed
+              : Logo
           }
           height={1}
           width={1}
