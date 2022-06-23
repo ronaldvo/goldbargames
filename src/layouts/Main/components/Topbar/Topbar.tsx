@@ -7,6 +7,8 @@ import { Link } from '@mui/material';
 import { NavItem } from './components';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Logo from '../../../assets/logo.svg';
+import Discord from '../../../assets/discord.svg';
+import MagicEden from '../../../assets/ME.png';
 import './topbar.css';
 import { ThemeModeToggler } from '../../components';
 
@@ -93,10 +95,46 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             <TwitterIcon fontSize="large"/> 
           </Link>
         </Box>   
-        <Box marginLeft={3}>
+        <Box marginLeft={4} paddingTop={0.7}>
+          <Link
+            underline="none"
+            component="a"
+            href="https://discord.gg/tWWe4WpwHC"
+            color="primary.main"
+            variant={'body1'}
+            target="_blank"
+            fontSize="large"
+          >
+            <Box
+              component={'img'}
+              src={Discord}
+              height='35px'
+              width={1}
+            />
+          </Link>
+        </Box>    
+        <Box marginLeft={4} paddingTop={0.7}>
+          <Link
+            underline="none"
+            component="a"
+            href="https://magiceden.io/marketplace/gold_bar_games"
+            color="primary.main"
+            variant={'body1'}
+            target="_blank"
+            fontSize="large"
+          >
+            <Box
+              component={'img'}
+              src={MagicEden}
+              height='20px'
+              width={1}
+            />
+          </Link>
+        </Box>                
+        {/* <Box marginLeft={3}>
           <ThemeModeToggler />
-        </Box>  
-        <Box marginLeft={3}>
+        </Box>   */}
+        <Box marginLeft={4}>
           <Button
             aria-label="Menu"
             variant={'contained'}
@@ -123,9 +161,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             <TwitterIcon fontSize="large"/> 
           </Link>
         </Box>
-        <Box marginRight={1}>
+        {/* <Box marginRight={1}>
           <ThemeModeToggler /> 
-        </Box> 
+        </Box>  */}
          
         <Box marginLeft={3}>
           <Button
