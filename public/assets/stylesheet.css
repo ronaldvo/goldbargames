@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'mokoto glitch';
+    src: url('./mokotoglitch.woff2') format('woff2'),
+        url('./mokotoglitch.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -2,35 +2,27 @@ import React from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import testAvatar from '../../assets/ichigo.png';
-import testAvatar2 from '../../assets/47.png';
-import testAvatar3 from '../../assets/32.png';
-
+import dice from '../../assets/dice.svg';
+import roulette from '../../assets/roulette.svg';
+import coinflip from '../../assets/coin-flip.svg';
 
 const mock = [
   {
-    name: 'ichigo',
-    title: 'Artist',
-    avatar: testAvatar,
+    name: 'Dice',
+    avatar: dice,
   },
   {
-    name: 'syro',
-    title: 'Developer',
-    avatar: testAvatar2,
+    name: 'Coin Flip',
+    avatar: coinflip,
   },
   {
-    name: 'xtal',
-    title: 'Developer',
-    avatar: testAvatar3,
+    name: 'Roulette',
+    avatar: roulette,
   },
 ];
 
@@ -58,32 +50,22 @@ const Founders = (): JSX.Element => {
       <Box zIndex={2} position={'relative'}>
         <Box marginBottom={4}>
           <Typography
-            variant={'h4'}
+            variant={'h2'}
+            color='text.primary'
             gutterBottom
             align={'left'}
             sx={{ fontWeight: 700 }}
           >
-            Founders
+            Games
           </Typography>
-          {/* <Typography
-            variant={'h6'}
-            component={'p'}
-            color={'text.secondary'}
-            align={'center'}
-            data-aos="fade-up"
-          >
-            There arge many variations ohf passages of sorem gpsum ilable,
-            <br />
-            but the majority have suffered alteration in.
-          </Typography> */}
         </Box>
         <Grid container spacing={4}>
           {mock.map((item, i) => (
             <Grid
               item
               xs={12}
-              sm={6}
-              md={4}
+              sm={12}
+              md={6}
               key={i}
               data-aos={'fade-up'}
               data-aos-delay={i * 100}
@@ -103,19 +85,16 @@ const Founders = (): JSX.Element => {
                 <Box
                   component={CardMedia}
                   borderRadius={2}
-                  width={1}
-                  height={1}
-                  minHeight={420}
+                  minHeight={225}
                   image={item.avatar}
                 
                 />
                 <CardContent>
                   <ListItemText
                     primary={item.name}
-                    secondary={item.title}
-                    primaryTypographyProps={{ fontWeight: 700 }}
+                    primaryTypographyProps={{ fontWeight: 700, fontSize: 25 }}
                   />
-                  <Box marginTop={1}>
+                  {/* <Box marginTop={1}>
                     <IconButton
                       aria-label="twitter"
                       size={'small'}
@@ -123,7 +102,7 @@ const Founders = (): JSX.Element => {
                     >
                       <TwitterIcon />
                     </IconButton>
-                  </Box>
+                  </Box> */}
                 </CardContent>
               </Box>
             </Grid>

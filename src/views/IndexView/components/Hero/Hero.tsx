@@ -6,9 +6,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import about from '../../assets/whatis.gif';
+
 import Typed from 'react-typed';
-import reveal from '../../assets/glitchreveal.gif';
+
+import logo from '../../assets/logo.svg';
 
 const Hero = (): JSX.Element => {
   const theme = useTheme();
@@ -27,54 +28,22 @@ const Hero = (): JSX.Element => {
               color="text.primary"
               sx={{ fontWeight: 700 }}
             >
-              What is
+              Welcome to
               <br />
               <Typography
                 color={'primary'}
                 component={'span'}
                 variant={'inherit'}
-                sx={{
-                  background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.3)} 0%)`,
-                }}
               >
-                ichigo punks?
-              </Typography>
-              <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
-                sx={{
-                  background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.3)} 0%)`,
-                }}
-              >
-                <Typed
-                  strings={
-                    [
-                      '',
-                    ]
-                  }
-                  typeSpeed={30}
-                  loop={false}
-                />
-              </Typography>              
+                Gold Bar Games!
+              </Typography>            
             </Typography>
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="text.secondary">
-                CNFT coming soon. PFP and much more. 
+            500 Revenue sharing Gold Bars that grant you passive income from Gold Bar Games &amp; secondary sales of Gold Bars. Gold Bar Games will start out with Gold Coin Flip, Roulette &amp; Dice Roll, and add more games every month. We aim to have 15+ revenue-generating games in the next 6-8 months. The Gold Bar DAO community will also get to vote on what games they would like to see next.
             </Typography>
-          </Box>
-          <Box marginBottom={3}>
-            <Typography variant="h6" component="p" color="text.secondary">
-                Experience the story of Ada Ichigo,
-                a hacker on the run who has uploaded her consciousness to the Cardano blockchain.
-            </Typography>
-          </Box>
-          <Box marginBottom={3}>
-            <Typography variant="h6" component="p" color="text.secondary">
-                Discord coming soon.
-            </Typography>
-          </Box>          
+          </Box>      
         </Box>
       </Grid>
       <Grid
@@ -95,15 +64,12 @@ const Hero = (): JSX.Element => {
           component={LazyLoadImage}
           height={1}
           width={1}
-          src={reveal}
+          src={logo}
           alt="..."
           borderRadius={2}
-          maxWidth={600}
-          maxHeight={600}
-          sx={{
-            objectFit: 'cover',
-            boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
-          }}
+          maxWidth={400}
+          maxHeight={400}
+
         />
       </Grid>
     </Grid>

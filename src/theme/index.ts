@@ -10,16 +10,16 @@ const getTheme = (mode: string, themeToggler: () => void): Theme =>
       shadows: shadows(mode),
       typography: {
         h1: {
-          fontFamily: '"Anek Malayalam"',
+          fontFamily: '"mokoto glitch"',
         },
         h2: {
-          fontFamily: '"Anek Malayalam"',
+          fontFamily: '"mokoto glitch"',
         },
         h3: {
-          fontFamily: '"Anek Malayalam"',
+          fontFamily: '"mokoto glitch"',
         },
         h4: {
-          fontFamily: '"Anek Malayalam"',
+          fontFamily: '"mokoto glitch"',
         },
         // h5: {
         //   fontFamily: '"Press Start 2P"',

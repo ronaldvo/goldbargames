@@ -7,114 +7,107 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Typed from 'react-typed';
-import MangaA from '../../assets/mangaA.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Slider from 'react-slick';
+
+const items = [
+  {
+    name: 'Random Name #1',
+    description: 'Probably the most random thing you have ever seen!'
+  },
+  {
+    name: 'Random Name #2',
+    description: 'Hello World!'
+  },
+  {
+    name: 'Random Name #3',
+    description: 'Hello World!'
+  },
+  {
+    name: 'Random Name #4',
+    description: 'Hello World!'
+  }    
+];
 
 const IntroText = (): JSX.Element => {
   const theme = useTheme();
+  const sliderOpts = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
   return (
     <Box>
       <Box marginBottom={0} marginTop={5} minHeight={120}>
-        <Box marginBottom={5}>
-          <Typography
-            variant="h6"
-            color="text.primary"
-            align={'left'}
-            gutterBottom
-            sx={{
-              fontWeight: 400,
-            }}
-          >
-            <Typography
-              color={'primary'}
-              component={'span'}
-              variant={'h4'}
-
-            >
-              <Typed
-                strings={
-                  [
-                    'It\'s all come down to this.', 
-                    'What have I gotten myself into?', 
-                    'No turning back now.',
-                  ]
-                }
-                typeSpeed={30}
-                loop={false}
+        <Box
+          sx={{
+            height: { xs: 'auto', md: 1 },
+            '& .slick-slide img': {
+              objectFit: 'cover',
+            },
+            '& .slick-list, & .slick-slider, & .slick-track, & .slick-slide > div': {
+              height: { xs: 'auto', md: 1 },
+            },
+            '& .slick-prev, & .slick-next': {
+              zIndex: 2,
+              bottom: 0,
+              top: '100%',
+              left: '100%',
+              right: 0,
+              transform: `translate(-100%, calc(-100% - ${theme.spacing(2)}))`,
+              marginLeft: theme.spacing(-2),
+              width: 32,
+              height: 32,
+              '&:before': {
+                fontSize: 32,
+              },
+            },
+            '& .slick-prev': {
+              marginLeft: theme.spacing(-7),
+            },
+            '& .lazy-load-image-loaded': {
+              height: 1,
+              width: 1,
+            },
+          }}
+        >
+          <Slider {...sliderOpts}>
+            {[
+              'https://assets.maccarianagency.com/backgrounds/img1.jpg',
+              'https://assets.maccarianagency.com/backgrounds/img3.jpg',
+              'https://assets.maccarianagency.com/backgrounds/img24.jpg',
+              'https://assets.maccarianagency.com/backgrounds/img25.jpg',
+            ].map((item) => (
+              <Box
+                key={item}
+                component={LazyLoadImage}
+                effect="blur"
+                src={item}
+                height={{ xs: 'auto', md: 1 }}
+                maxHeight={{ xs: 300, md: 1 }}
+                width={1}
+                maxWidth={1}
               />
-            </Typography>
-          </Typography>
+            ))}
+          </Slider>          
+          {/* <Carousel
+            navButtonsAlwaysVisible={true}       
+          >
+            {
+              items.map( (item, i) => 
+                <Paper key={i} sx={ {padding: 10} }>
+                  <h2>{item.name}</h2>
+                  <p>{item.description}</p>
+                </Paper>              
+              )
+            }
+          </Carousel>           */}
         </Box>
       </Box>
-      {/* <Box marginBottom={20} marginTop={10}>
-        <Card variant="outlined">
-          <CardMedia
-            component="img"
-            height="1500"
-            image={ MangaA }
-            alt="Just the start"
-          />            
-        </Card>          
-      </Box>       */}
-      {/* <Box
-        component={SyntaxHighlighter}
-        language={'javascript'}
-        style={vs2015}
-        padding={`${theme.spacing(2)} !important`}
-        borderRadius={2}
-        margin={`${theme.spacing(0)} !important`}
-        bgcolor={'#21325b !important'}
-      >
-        {`
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.parseAsync = exports.parseSync = exports.parse = void 0;
-
-function _gensync() {
-  const data = require("gensync");
-
-  _gensync = function () {
-    return data;
-  };
-
-  return data;
-}
-
-var _config = require("./config");
-
-var _parser = require("./parser");
-
-var _normalizeOpts = require("./transformation/normalize-opts");
-
-const parseRunner = _gensync()(function* parse(code, opts) {
-  const config = yield* (0, _config.default)(opts);
-
-  if (config === null) {
-    return null;
-  }
-
-  return yield* (0, _parser.default)(config.passes, (0, _normalizeOpts.default)(config), code);
-});
-
-const parse = function parse(code, opts, callback) {
-  if (typeof opts === "function") {
-    callback = opts;
-    opts = undefined;
-  }
-
-  if (callback === undefined) return parseRunner.sync(code, opts);
-  parseRunner.errback(code, opts, callback);
-};
-
-exports.parse = parse;
-const parseSync = parseRunner.sync;
-exports.parseSync = parseSync;
-const parseAsync = parseRunner.async;
-exports.parseAsync = parseAsync;
-        `}
-      
-      </Box> */}
     </Box>
   );
 };
