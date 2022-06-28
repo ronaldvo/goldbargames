@@ -66,6 +66,6 @@ export const dark = {
     paper: '#2C2F33',
     default: '#2C2F33',
     level2: '#2C2F33',
-    level1: '#2D3748',
+    level1: '#2C2F33',
   },
 };

@@ -19,24 +19,28 @@ const mock = [
     title: 'Coin Flip',
     subtitle:
       'Flip heads or tails to double your money.',
+    link: '/coinflip'
   },
   {
     media: dice,
     title: 'Dice',
     subtitle:
       'Classic game of guessing dice.',
+    link: '/dice'      
   },
   {
     media: roulette,
     title: 'Roulette',
     subtitle:
       'Play roulette for a chance to triple your money.',
+    link: '/roulette'
   },
   {
     media: coinflip,
     title: 'Coin Flip',
     subtitle:
       'Flip heads or tails to double your money.',
+    link: '/coinflip'
   },
 ];
 
@@ -152,17 +156,15 @@ const GamesSlider = (): JSX.Element => {
                       viewBox="0 0 1921 273"
                       sx={{
                         position: 'absolute',
-                        width: '100%',
+                        height: '200px',
+                        width: 'auto',
                         left: 0,
                         bottom: 0,
                         right: 0,
                         zIndex: 1,
                       }}
                     >
-                      <polygon
-                        fill={theme.palette.background.paper}
-                        points="0,273 1921,273 1921,0 "
-                      />
+
                     </Box>
                   </CardMedia>
                   <CardContent>
@@ -180,7 +182,7 @@ const GamesSlider = (): JSX.Element => {
                   </CardContent>
                   <Box flexGrow={1} />
                   <CardActions sx={{ justifyContent: 'flex-end' }}>
-                    <Button variant="contained">Play</Button>
+                    <Button variant="contained" href={item.link}>Play</Button>
                   </CardActions>
                 </Box>
               </Box>

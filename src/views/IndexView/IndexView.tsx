@@ -17,49 +17,34 @@ const IndexView = (): JSX.Element => {
   const theme = useTheme();
   return (
     <Box sx={{ overflow: 'hidden' }}>
-      <Main bgcolor={'background.paper'}>
-       
-        <Box
-          sx={{
-            backgroundImage: `linear-gradient(to bottom, ${alpha(
-              theme.palette.background.paper,
-              0,
-            )}, ${alpha(theme.palette.alternate.main, 1)} 100%)`,
-            backgroundRepeat: 'repeat-x',
-            position: 'relative',
-          }}
-        >
+      <Main bgcolor={'background.default'}>
+        <Container>
+          <GoldBarGames />
+        </Container>   
+        <Container>
+          <Reviews />
+        </Container>            
+        <Container>
+          <GamesSlider />
+        </Container>                               
+        {/* <Container>
+          <Grid container spacing={2}>
+            <Grid
+              xs={12}
+              sm={8}
+              md={8}
+            >
 
-          <Container>
-            <GoldBarGames />
-          </Container>   
-          <Container>
-            <Reviews />
-          </Container>            
-          <Container>
-            <GamesSlider />
-          </Container>                               
-          {/* <Container>
-            <Grid container spacing={2}>
-              <Grid
-                xs={12}
-                sm={8}
-                md={8}
-              >
-
-              </Grid>
-              <Grid
-                xs={12}
-                sm={4}
-                md={4}
-              >
-
-              </Grid>
             </Grid>
-          </Container> */}
+            <Grid
+              xs={12}
+              sm={4}
+              md={4}
+            >
 
-
-        </Box>
+            </Grid>
+          </Grid>
+        </Container> */}
       </Main>
     </Box>
   );
