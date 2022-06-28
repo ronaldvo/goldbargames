@@ -81,8 +81,30 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           >
             Games
           </Link>
-        </Box>        
-        <Box marginLeft={2}>
+        </Box> 
+        <Box marginLeft={3}>
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color="text.primary"
+            variant={'h6'}
+          >
+            Leaderboard
+          </Link>
+        </Box>           
+        <Box marginLeft={3}>
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color="text.primary"
+            variant={'h6'}
+          >
+            Challenges
+          </Link>
+        </Box>            
+        <Box marginLeft={3}>
           <Link
             underline="none"
             component="a"
