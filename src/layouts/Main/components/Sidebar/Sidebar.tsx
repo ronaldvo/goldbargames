@@ -30,12 +30,14 @@ const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
           width: '100%',
           maxWidth: 120,
         },
+        
       }}
     >
       <Box
         sx={{
           height: '100%',
           padding: 1,
+          overflow: 'hidden'
         }}
       >
         <SidebarNav pages={pages} />
