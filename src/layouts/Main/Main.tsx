@@ -71,20 +71,27 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }: Props)
           />
         </Container>
       </AppBar>
-      <Sidebar
-        onClose={handleSidebarClose}
-        open={open}
-        variant="temporary"
-        pages={pages}
-      />
+      <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <Sidebar
+          onClose={handleSidebarClose}
+          open={open}
+          variant="permanent"
+          pages={pages}
+        />
+      </Box>
+      <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+        <Sidebar
+          onClose={handleSidebarClose}
+          open={open}
+          variant="temporary"
+          pages={pages}
+        />
+      </Box>      
       <main>
         {children}
-        {/* <Divider /> */}
       </main>
-      {/* <Container paddingY={4}>
-        <Footer />
-      </Container> */}
     </Box>
+    
   );
 };
 

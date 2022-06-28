@@ -28,7 +28,7 @@ const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
       sx={{
         '& .MuiPaper-root': {
           width: '100%',
-          maxWidth: 280,
+          maxWidth: 120,
         },
       }}
     >
@@ -38,7 +38,7 @@ const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
           padding: 1,
         }}
       >
-        {/* <SidebarNav pages={pages} /> */}
+        <SidebarNav pages={pages} />
       </Box>
     </Drawer>
   );

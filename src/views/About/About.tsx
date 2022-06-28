@@ -5,14 +5,10 @@ import Main from 'layouts/Main';
 import Container from 'components/Container';
 import Grid from '@mui/material/Grid';
 import {
-  IntroText,
-  Hero,
-  GoldBarGames,
-  Founders,
-  Reviews
+  Hero
 } from './components';
 
-const IndexView = (): JSX.Element => {
+const About = (): JSX.Element => {
   const theme = useTheme();
   return (
     <Box sx={{ overflow: 'hidden' }}>
@@ -27,34 +23,10 @@ const IndexView = (): JSX.Element => {
             backgroundRepeat: 'repeat-x',
             position: 'relative',
           }}
-        >
-
+        >    
           <Container>
-            <GoldBarGames />
-          </Container>                      
-          <Container>
-            <Grid container spacing={2}>
-              <Grid
-                xs={12}
-                sm={8}
-                md={8}
-              >
-                <Container>
-                  <Founders />
-                </Container>  
-              </Grid>
-              <Grid
-                xs={12}
-                sm={4}
-                md={4}
-              >
-                <Container>
-                  <Reviews />
-                </Container>  
-              </Grid>
-            </Grid>
-          </Container>
-
+            <Hero />
+          </Container>  
 
         </Box>
       </Main>
@@ -62,4 +34,4 @@ const IndexView = (): JSX.Element => {
   );
 };
 
-export default IndexView;
+export default About;

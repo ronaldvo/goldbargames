@@ -2,6 +2,11 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import Logo from '../../../../../assets/logo.svg';
+import coinflip from '../../../../../assets/coinflip.png';
+import dice from '../../../../../assets/dice.png';
+import roulette from '../../../../../assets/roulette.png';
 
 import NavItem from './components/NavItem';
 
@@ -36,32 +41,100 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
           display={'flex'}
           component="a"
           href="/"
-          title="theFront"
-          width={{ xs: 100, md: 120 }}
-        >
+          title="MyceliaVerse"
+          width={{ xs: 120, md: 120 }}
+          sx={{ textDecoration: 'none' }}
+        >          
           <Box
             component={'img'}
             src={
-              mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              Logo
             }
-            height={1}
-            width={1}
+            height='70px'
+            width='auto'
           />
         </Box>
       </Box>
-      <Box paddingX={2} paddingY={2}>
-        <Box>
-          <NavItem title={'Landings'} items={landingPages} />
+      <Box paddingX={1} paddingY={4}>
+        <Box marginBottom={2}>
+          <Button
+            size={'large'}
+            component={'a'}
+            href={'/coinflip'}
+            fullWidth
+            sx={{
+              justifyContent: 'left',
+              color: '#fff !important',
+              backgroundColor:'transparent',
+              fontWeight: 400,
+              fontSize: '1rem'
+            }}
+          >
+            <Box
+              component={'img'}
+              src={
+                coinflip
+              }
+              height='50px'
+              width='auto'
+            />
+          </Button>
         </Box>
+        <Box marginBottom={2}>
+          <Button
+            size={'large'}
+            component={'a'}
+            href={'/dice'}
+            fullWidth
+            sx={{
+              justifyContent: 'left',
+              color: '#fff !important',
+              backgroundColor:'transparent',
+              fontWeight: 400,
+              fontSize: '1rem'
+            }}
+          >
+            <Box
+              component={'img'}
+              src={
+                dice
+              }
+              height='35px'
+              width='auto'
+            />
+          </Button>
+        </Box>   
         <Box>
-          <NavItem title={'Company'} items={companyPages} />
+          <Button
+            size={'large'}
+            component={'a'}
+            href={'/roulette'}
+            fullWidth
+            sx={{
+              justifyContent: 'left',
+              color: '#fff !important',
+              backgroundColor:'transparent',
+              fontWeight: 400,
+              fontSize: '1rem'
+            }}
+          >
+            <Box
+              component={'img'}
+              src={
+                roulette
+              }
+              height='50px'
+              width='auto'
+            />
+          </Button>
+        </Box>             
+        <Box>
+            
         </Box>
-        <Box>
+        {/*<Box>
           <NavItem title={'Pages'} items={secondaryPages} />
         </Box>
-        <Box>
+         <Box>
           <NavItem title={'Account'} items={accountPages} />
         </Box>
         <Box>
@@ -69,19 +142,8 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
         </Box>
         <Box>
           <NavItem title={'Portfolio'} items={portfolioPages} />
-        </Box>
-        <Box marginTop={2}>
-          <Button
-            size={'large'}
-            variant="outlined"
-            fullWidth
-            component="a"
-            href="/docs/introduction"
-          >
-            Documentation
-          </Button>
-        </Box>
-        <Box marginTop={1}>
+        </Box> */}
+        {/* <Box marginTop={2}>
           <Button
             size={'large'}
             variant="contained"
@@ -91,9 +153,9 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             target="blank"
             href="https://MUI.com/store/items/the-front-landing-page/"
           >
-            Purchase now
+            Connect Wallet
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

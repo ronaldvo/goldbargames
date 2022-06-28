@@ -59,7 +59,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
         title="Ichigo Punks"
         width={{ xs: 160, md: 160 }}
       >
-        <Box
+        {/* <Box
           component={'img'}
           src={
             (mode === 'light' && !colorInvert)
@@ -68,10 +68,10 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           }
           height={1}
           width={1}
-        />
+        /> */}
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        {/* <Box>
+        <Box>
           <Link
             underline="none"
             component="a"
@@ -81,7 +81,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           >
             About
           </Link>
-        </Box> */}
+        </Box>
         <Box marginLeft={4} paddingTop={0.7}>
           <Link
             underline="none"
@@ -176,7 +176,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             }}><b>CONNECT WALLET</b></Button>
         </Box>           
         
-        {/* <Button
+        <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"
           variant={'outlined'}
@@ -188,7 +188,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           }}
         >
           <MenuIcon />
-        </Button> */}
+        </Button>
       </Box>
     </Box>
   );

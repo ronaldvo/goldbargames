@@ -1,76 +1,16 @@
 const pages = {
   landings: [
     {
-      title: 'Mobile App',
-      href: '/mobile-app',
+      title: 'Coin Flip',
+      href: '/coinflip',
     },
     {
-      title: 'Desktop App',
-      href: '/desktop-app',
+      title: 'Roulette',
+      href: '/roulette',
     },
     {
-      title: 'Startup',
-      href: '/startup',
-    },
-    {
-      title: 'Expo',
-      href: '/expo',
-    },
-    {
-      title: 'Marketing',
-      href: '/',
-    },
-    {
-      title: 'Service',
-      href: '/service',
-    },
-    {
-      title: 'Enterprise',
-      href: '/enterprise',
-    },
-    {
-      title: 'Cloud Hosting',
-      href: '/cloud-hosting',
-    },
-    {
-      title: 'Design Company',
-      href: '/design-company',
-    },
-    {
-      title: 'Web Basic',
-      href: '/web-basic',
-    },
-    {
-      title: 'Overview',
-      href: '/home',
-    },
-    {
-      title: 'Agency',
-      href: '/agency',
-    },
-    {
-      title: 'E-Learning',
-      href: '/e-learning',
-    },
-    {
-      title: 'Coworking',
-      href: '/coworking',
-    },
-    {
-      title: 'Rental',
-      href: '/rental',
-    },
-    {
-      title: 'Job Listing',
-      href: '/job-listing',
-    },
-    {
-      title: 'Logistics',
-      href: '/logistics',
-    },
-    {
-      title: 'E-commerce',
-      href: '/e-commerce',
+      title: 'Dice',
+      href: '/dice',
     },
   ],
   company: [
