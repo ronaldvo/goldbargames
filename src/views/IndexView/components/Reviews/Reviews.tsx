@@ -30,7 +30,7 @@ const mock = [
     feedback:
       'Doubled their bet of 0.5 sol to 1 sol!',
     name: 'QHjR...htnf',
-    title: 'Coin Flip',
+    title: 'Dice',
     avatar: SolIcon,
   },
   {
@@ -58,7 +58,7 @@ const mock = [
     feedback:
       'Doubled their bet of 0.5 sol to 1 sol!',
     name: 'QHjR...htnf',
-    title: 'Coin Flip',
+    title: 'Dice',
     avatar: SolIcon,
   },
   {
@@ -74,22 +74,20 @@ const Reviews = (): JSX.Element => {
   const theme = useTheme();
 
   const sliderOpts = {
-    dots: true,
-    vertical: true,
+    dots: false,
+    vertical: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
-    rtl: true,
+    rtl: false,
     autoplay: true,
     autoplaySpeed: 2000,
   };
 
   return (
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
-      <Box marginBottom={1}>
-      </Box>
       <Box width={1}>
         <Slider {...sliderOpts}>
           {mock.map((item, i) => (
@@ -111,7 +109,7 @@ const Reviews = (): JSX.Element => {
                     alignItems: 'left',
                   }}
                 >
-                  <Typography align={'left'} variant={'h6'}>
+                  <Typography align={'left'}>
                     {item.feedback}
                   </Typography>
                 </CardContent>

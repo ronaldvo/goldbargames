@@ -172,7 +172,6 @@ const GoldBarGames = (): JSX.Element => {
           </Box>
         </Box>
       </Container>
-      <Divider />
     </Box>
   );
 };

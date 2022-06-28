@@ -9,7 +9,8 @@ import {
   Hero,
   GoldBarGames,
   Founders,
-  Reviews
+  Reviews,
+  GamesSlider
 } from './components';
 
 const IndexView = (): JSX.Element => {
@@ -31,29 +32,31 @@ const IndexView = (): JSX.Element => {
 
           <Container>
             <GoldBarGames />
-          </Container>                      
+          </Container>   
           <Container>
+            <Reviews />
+          </Container>            
+          <Container>
+            <GamesSlider />
+          </Container>                               
+          {/* <Container>
             <Grid container spacing={2}>
               <Grid
                 xs={12}
                 sm={8}
                 md={8}
               >
-                <Container>
-                  <Founders />
-                </Container>  
+
               </Grid>
               <Grid
                 xs={12}
                 sm={4}
                 md={4}
               >
-                <Container>
-                  <Reviews />
-                </Container>  
+
               </Grid>
             </Grid>
-          </Container>
+          </Container> */}
 
 
         </Box>
