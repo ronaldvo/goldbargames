@@ -72,7 +72,6 @@ const Hero = (): JSX.Element => {
           </Box>      
         </Box>
       </Grid>
-
     </Grid>
   );
 };

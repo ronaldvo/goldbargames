@@ -87,6 +87,7 @@ const GamesSlider = (): JSX.Element => {
             variant="contained"
             color="primary"
             size="large"
+            href="/games"
             endIcon={
               <Box
                 component={'svg'}
