@@ -75,14 +75,25 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           <Link
             underline="none"
             component="a"
+            href="/games"
+            color="text.primary"
+            variant={'h6'}
+          >
+            Games
+          </Link>
+        </Box>        
+        <Box marginLeft={2}>
+          <Link
+            underline="none"
+            component="a"
             href="/about"
             color="text.primary"
-            variant={'body1'}
+            variant={'h6'}
           >
             About
           </Link>
         </Box>
-        <Box marginLeft={4} paddingTop={0.7}>
+        <Box marginLeft={3} paddingTop={0.7}>
           <Link
             underline="none"
             component="a"
@@ -95,7 +106,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             <TwitterIcon fontSize="large"/> 
           </Link>
         </Box>   
-        <Box marginLeft={4} paddingTop={0.7}>
+        <Box marginLeft={3} paddingTop={0.7}>
           <Link
             underline="none"
             component="a"
@@ -113,7 +124,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             />
           </Link>
         </Box>    
-        <Box marginLeft={4} paddingTop={0.7}>
+        <Box marginLeft={3} paddingTop={0.7}>
           <Link
             underline="none"
             component="a"
@@ -134,7 +145,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
         {/* <Box marginLeft={3}>
           <ThemeModeToggler />
         </Box>   */}
-        <Box marginLeft={4}>
+        <Box marginLeft={3}>
           <Button
             aria-label="Menu"
             variant={'contained'}

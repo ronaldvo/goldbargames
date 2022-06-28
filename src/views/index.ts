@@ -4,3 +4,4 @@ export { default as CoinFlip } from './CoinFlip';
 export { default as Dice } from './Dice';
 export { default as Roulette } from './Roulette';
 export { default as About } from './About';
+export { default as Games } from './Games';
