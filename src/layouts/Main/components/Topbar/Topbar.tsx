@@ -53,7 +53,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
       width={1}
     >        
       <Box
-        display={'flex'}
+        sx={{ display: { xs: 'none', md: 'flex' } }} 
       >
         <Box>
           <Button
@@ -66,7 +66,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
               minWidth: 'auto',
             }}><b>Games</b></Button>
         </Box> 
-        <Box marginLeft={3}>
+        <Box marginLeft={2}>
           <Button
             component={'a'}
             href={'/leaderboard'}
@@ -77,7 +77,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
               minWidth: 'auto',
             }}><b>Leaderboard</b></Button>
         </Box>           
-        <Box marginLeft={3}>
+        <Box marginLeft={2}>
           <Button
             component={'a'}
             href={'/challenges'}
@@ -88,7 +88,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
               minWidth: 'auto',
             }}><b>Challenges</b></Button>
         </Box>            
-        <Box marginLeft={3}>
+        <Box marginLeft={2}>
           <Button
             component={'a'}
             href={'/about'}
@@ -100,6 +100,58 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             }}><b>About</b></Button>
         </Box>        
       </Box>
+      <Box
+        sx={{ display: { xs: 'flex', md: 'none' } }} 
+      >
+        <Box>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/games'}          
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Games</b></Button>
+        </Box> 
+        <Box marginLeft={2}>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/leaderboard'}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Leaderboard</b></Button>
+        </Box>           
+        <Box marginLeft={2}>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/challenges'}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Challenges</b></Button>
+        </Box>            
+        <Box marginLeft={2}>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/about'}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>About</b></Button>
+        </Box>        
+      </Box>      
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box marginLeft={3} paddingTop={0.7}>
           <Link
@@ -114,7 +166,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             <TwitterIcon fontSize="large"/> 
           </Link>
         </Box>   
-        <Box marginLeft={3} paddingTop={0.7}>
+        <Box marginLeft={2} paddingTop={0.7}>
           <Link
             underline="none"
             component="a"
@@ -132,7 +184,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             />
           </Link>
         </Box>    
-        <Box marginLeft={3} paddingTop={0.7}>
+        <Box marginLeft={2} paddingTop={0.7}>
           <Link
             underline="none"
             component="a"
@@ -153,14 +205,13 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
         {/* <Box marginLeft={3}>
           <ThemeModeToggler />
         </Box>   */}
-        <Box marginLeft={3}>
+        <Box marginLeft={2}>
           <Button
             aria-label="Menu"
             variant={'outlined'}
             sx={{
               borderRadius: 2,
               minWidth: 'auto',
-              padding: 2,
             }}><b>CONNECT WALLET</b></Button>
         </Box>         
                              
