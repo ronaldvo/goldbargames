@@ -9,7 +9,7 @@ import {
   Hero,
   GoldBarGames,
   Founders,
-  Reviews,
+  WinLossFeed,
   GamesSlider,
   GamesIconList
 } from './components';
@@ -26,7 +26,7 @@ const IndexView = (): JSX.Element => {
           <GamesSlider />
         </Container>     
         <Container marginTop={-6}>
-          <Reviews />
+          <WinLossFeed />
         </Container>                  
       </Main>
     </Box>
