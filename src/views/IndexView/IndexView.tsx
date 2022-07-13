@@ -5,13 +5,9 @@ import Main from 'layouts/Main';
 import Container from 'components/Container';
 import Grid from '@mui/material/Grid';
 import {
-  IntroText,
-  Hero,
   GoldBarGames,
-  Founders,
   WinLossFeed,
   GamesSlider,
-  GamesIconList
 } from './components';
 
 const IndexView = (): JSX.Element => {
