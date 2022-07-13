@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from '@mui/material';
 import { NavItem } from './components';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import Logo from '../../../assets/logo.svg';
+import Logo from '../../../assets/logo.png';
 import Discord from '../../../assets/discord.svg';
 import MagicEden from '../../../assets/ME.png';
 import './topbar.css';
@@ -103,6 +103,25 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
       <Box
         sx={{ display: { xs: 'flex', md: 'none' } }} 
       >
+        <Box width={1} marginRight={2}>
+          <Box
+            display={'flex'}
+            component="a"
+            href="/"
+            title="Gold Bar Games"
+            sx={{ textDecoration: 'none', justifyContent: 'center' }}
+          >          
+            <Box
+              component={'img'}
+              src={
+                Logo
+              }
+              height='44px'
+              padding={0}
+              width='auto'
+            />
+          </Box>
+        </Box>        
         <Box>
           <Button
             component={'a'}
