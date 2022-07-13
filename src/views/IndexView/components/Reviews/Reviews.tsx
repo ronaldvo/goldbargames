@@ -91,7 +91,7 @@ const Reviews = (): JSX.Element => {
     vertical: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     rtl: true,

@@ -160,8 +160,8 @@ const GamesSlider = (): JSX.Element => {
                       viewBox="0 0 1921 273"
                       sx={{
                         position: 'absolute',
-                        height: '250px',
-                        width: 'auto',
+                        // height: '250px',
+                        // width: 'auto',
                         left: 0,
                         bottom: 0,
                         right: 0,
@@ -173,7 +173,7 @@ const GamesSlider = (): JSX.Element => {
                   </CardMedia>
                   <CardContent>
                     <Typography
-                      variant={'h6'}
+                      variant={'h4'}
                       gutterBottom
                       align={'left'}
                       sx={{ fontWeight: 700 }}
