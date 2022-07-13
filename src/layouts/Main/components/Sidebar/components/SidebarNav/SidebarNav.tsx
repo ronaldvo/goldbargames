@@ -41,9 +41,8 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
           display={'flex'}
           component="a"
           href="/"
-          title="MyceliaVerse"
-          width={{ xs: 120, md: 120 }}
-          sx={{ textDecoration: 'none' }}
+          title="Gold Bar Games"
+          sx={{ textDecoration: 'none', justifyContent: 'center' }}
         >          
           <Box
             component={'img'}
@@ -51,8 +50,8 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
               Logo
             }
             height='70px'
+            padding={0}
             width='auto'
-            padding="3px"
           />
         </Box>
       </Box>
@@ -129,9 +128,55 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             />
           </Button>
         </Box>             
-        <Box>
-            
-        </Box>
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }} marginTop={2}>
+          <Button
+            aria-label="Menu"
+            variant={'outlined'}
+            fullWidth
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>CONNECT WALLET</b></Button>
+        </Box>   
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }} marginTop={2}>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/leaderboard'}
+            aria-label="Menu"
+            variant={'outlined'}
+            fullWidth
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Leaderboard</b></Button>
+        </Box>    
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }} marginTop={2}>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/challenges'}
+            aria-label="Menu"
+            variant={'outlined'}
+            fullWidth
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Challenges</b></Button>
+        </Box>     
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }} marginTop={2}>
+          <Button
+            component={'a'}
+            size={'small'}
+            href={'/about'}
+            aria-label="Menu"
+            variant={'outlined'}
+            fullWidth
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>About</b></Button>                                    
+        </Box>  
         {/*<Box>
           <NavItem title={'Pages'} items={secondaryPages} />
         </Box>

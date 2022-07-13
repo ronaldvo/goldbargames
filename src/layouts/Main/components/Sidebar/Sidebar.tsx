@@ -20,30 +20,61 @@ interface Props {
 
 const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
   return (
-    <Drawer
-      anchor="left"
-      onClose={() => onClose()}
-      open={open}
-      variant={variant}
-      sx={{
-        '& .MuiPaper-root': {
-          width: '100%',
-          maxWidth: 120,
-        },
-        
-      }}
-    >
-      <Box
-        sx={{
-          height: '100%',
-          padding: 1,
-          marginTop: '45px',
-          overflow: 'hidden'
-        }}
-      >
-        <SidebarNav pages={pages} />
+    <Box>
+      <Box sx={{ display: { xs: 'none', md: 'block' } }} >
+        <Drawer
+          anchor="left"
+          onClose={() => onClose()}
+          open={open}
+          variant={variant}
+          sx={{
+            '& .MuiPaper-root': {
+              width: '100%',
+              maxWidth: 120,
+            },
+            
+          }}
+        >
+          <Box
+            sx={{
+              height: '100%',
+              padding: 1,
+              marginTop: '45px',
+              overflow: 'hidden'
+            }}
+          >
+            <SidebarNav pages={pages} />
+          </Box>
+        </Drawer>
       </Box>
-    </Drawer>
+      <Box sx={{ display: { xs: 'block', md: 'none' } }} >
+        <Drawer
+          anchor="left"
+          onClose={() => onClose()}
+          open={open}
+          variant={variant}
+          sx={{
+            '& .MuiPaper-root': {
+              width: '100%',
+              maxWidth: 200,
+            },
+            
+          }}
+        >
+          <Box
+            sx={{
+              height: '100%',
+              padding: 1,
+              marginTop: '45px',
+              overflow: 'hidden'
+            }}
+          >
+            <SidebarNav pages={pages} />
+          </Box>
+        </Drawer>
+      </Box>
+    </Box>
+
   );
 };
 

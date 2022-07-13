@@ -114,42 +114,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
               borderRadius: 2,
               minWidth: 'auto',
             }}><b>Games</b></Button>
-        </Box> 
-        <Box marginLeft={2}>
-          <Button
-            component={'a'}
-            size={'small'}
-            href={'/leaderboard'}
-            aria-label="Menu"
-            variant={'outlined'}
-            sx={{
-              borderRadius: 2,
-              minWidth: 'auto',
-            }}><b>Leaderboard</b></Button>
-        </Box>           
-        <Box marginLeft={2}>
-          <Button
-            component={'a'}
-            size={'small'}
-            href={'/challenges'}
-            aria-label="Menu"
-            variant={'outlined'}
-            sx={{
-              borderRadius: 2,
-              minWidth: 'auto',
-            }}><b>Challenges</b></Button>
-        </Box>            
-        <Box marginLeft={2}>
-          <Button
-            component={'a'}
-            size={'small'}
-            href={'/about'}
-            aria-label="Menu"
-            variant={'outlined'}
-            sx={{
-              borderRadius: 2,
-              minWidth: 'auto',
-            }}><b>About</b></Button>
         </Box>        
       </Box>      
       <Box sx={{ display: { xs: 'none', s: 'none', md: 'flex' } }} alignItems={'center'}>
@@ -212,16 +176,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             }}><b>CONNECT WALLET</b></Button>
         </Box>                       
       </Box>
-      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>  
-        <Box marginRight={2}>
-          <Button
-            aria-label="Menu"
-            variant={'outlined'}
-            sx={{
-              borderRadius: 2,
-              minWidth: 'auto',
-            }}><b>CONNECT WALLET</b></Button>
-        </Box>                
+      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>                 
         <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"
