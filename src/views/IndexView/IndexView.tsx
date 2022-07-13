@@ -22,31 +22,12 @@ const IndexView = (): JSX.Element => {
         <Container>
           <GoldBarGames />
         </Container>   
-        <Container marginTop={-6}>
-          <Reviews />
-        </Container>            
         <Container>
           <GamesSlider />
         </Container>     
-                                   
-        {/* <Container>
-          <Grid container spacing={2}>
-            <Grid
-              xs={12}
-              sm={8}
-              md={8}
-            >
-
-            </Grid>
-            <Grid
-              xs={12}
-              sm={4}
-              md={4}
-            >
-
-            </Grid>
-          </Grid>
-        </Container> */}
+        <Container marginTop={-6}>
+          <Reviews />
+        </Container>                  
       </Main>
     </Box>
   );

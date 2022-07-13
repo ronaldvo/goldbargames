@@ -37,6 +37,7 @@ const Sidebar = ({ pages, open, variant, onClose }: Props): JSX.Element => {
         sx={{
           height: '100%',
           padding: 1,
+          marginTop: '45px',
           overflow: 'hidden'
         }}
       >

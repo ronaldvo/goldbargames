@@ -55,16 +55,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
       <Box
         display={'flex'}
       >
-        {/* <Box
-          component={'img'}
-          src={
-            (mode === 'light' && !colorInvert)
-              ? Logo
-              : Logo
-          }
-          height={1}
-          width={1}
-        /> */}
         <Box>
           <Button
             component={'a'}

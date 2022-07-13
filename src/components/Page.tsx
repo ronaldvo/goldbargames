@@ -70,10 +70,12 @@ export default function Page({ children }: Props): JSX.Element {
         <Paper elevation={0}        
           sx={{
             marginLeft: '130px',
+            marginTop: '30px',
             display: { xs: 'none', s: 'none', md: 'block' }
           }}>{children}</Paper>
         <Paper elevation={0}        
           sx={{
+            marginTop: '30px',
             display: { xs: 'block', s: 'block', md: 'none' }
           }}>{children}</Paper>        
       </Box>

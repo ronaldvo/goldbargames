@@ -30,6 +30,7 @@ export const light = {
     default: '#ffffff',
     level2: '#a3e5ff',
     level1: '#ffffff',
+    card: '#171b27',    
   },
 };
 
@@ -65,7 +66,7 @@ export const dark = {
   background: {
     paper: '#0d111e',
     default: '#0c111e',
-    level2: '#0c111e',
+    level2: '#171b27',
     level1: '#0c111e',
     card: '#171b27',
   },

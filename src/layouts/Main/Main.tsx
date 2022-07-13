@@ -8,7 +8,7 @@ import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Container from 'components/Container';
-import { Topbar, Sidebar, Footer, ThemeModeToggler } from './components';
+import { Topbar, Sidebar, Footer, ThemeModeToggler, StatusBar } from './components';
 
 import pages from '../navigation';
 
@@ -55,6 +55,20 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }: Props)
           </Box>
         </Container>
       </Box>
+      <AppBar
+        sx={{
+          top: 0,
+          zIndex: '5000',
+          height: '35px',
+          backgroundColor: theme.palette.background.level2,
+        }}
+        elevation={0}
+      >
+        <StatusBar             
+          onSidebarOpen={handleSidebarOpen}
+          pages={pages}
+          colorInvert={trigger ? false : colorInvert}/>
+      </AppBar>
       <AppBar
         position={'sticky'}
         sx={{
