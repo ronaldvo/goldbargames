@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid';
 
 import Typed from 'react-typed';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 const Hero = (): JSX.Element => {
   const theme = useTheme();
@@ -67,7 +67,7 @@ const Hero = (): JSX.Element => {
           src={logo}
           alt="..."
           borderRadius={2}
-          maxWidth={400}
+          maxWidth='auto'
           maxHeight={400}
 
         />

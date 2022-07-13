@@ -29,6 +29,7 @@ const getTheme = (mode: string, themeToggler: () => void): Theme =>
         // },
         fontFamily: 'Anek Malayalam',
         button: {
+          fontFamily: 'mokoto glitch',
           textTransform: 'none',
           fontWeight: 'medium' as React.CSSProperties['fontWeight'],
         },

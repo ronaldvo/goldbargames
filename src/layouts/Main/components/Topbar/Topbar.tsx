@@ -54,10 +54,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
     >        
       <Box
         display={'flex'}
-        component="a"
-        href="/"
-        title="Ichigo Punks"
-        width={{ xs: 160, md: 160 }}
       >
         {/* <Box
           component={'img'}
@@ -69,52 +65,52 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
           height={1}
           width={1}
         /> */}
-      </Box>
-      <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
-          <Link
-            underline="none"
-            component="a"
-            href="/games"
-            color="text.primary"
-            variant={'h6'}
-          >
-            Games
-          </Link>
+          <Button
+            component={'a'}
+            href={'/games'}          
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Games</b></Button>
         </Box> 
         <Box marginLeft={3}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color="text.primary"
-            variant={'h6'}
-          >
-            Leaderboard
-          </Link>
+          <Button
+            component={'a'}
+            href={'/leaderboard'}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Leaderboard</b></Button>
         </Box>           
         <Box marginLeft={3}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color="text.primary"
-            variant={'h6'}
-          >
-            Challenges
-          </Link>
+          <Button
+            component={'a'}
+            href={'/challenges'}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>Challenges</b></Button>
         </Box>            
         <Box marginLeft={3}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color="text.primary"
-            variant={'h6'}
-          >
-            About
-          </Link>
-        </Box>
+          <Button
+            component={'a'}
+            href={'/about'}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>About</b></Button>
+        </Box>        
+      </Box>
+      <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box marginLeft={3} paddingTop={0.7}>
           <Link
             underline="none"
@@ -170,7 +166,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
         <Box marginLeft={3}>
           <Button
             aria-label="Menu"
-            variant={'contained'}
+            variant={'outlined'}
             sx={{
               borderRadius: 2,
               minWidth: 'auto',
@@ -179,36 +175,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
         </Box>         
                              
       </Box>
-      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
-       
-        <Box marginRight={2} paddingTop={0.7}>
-          <Link
-            underline="none"
-            component="a"
-            href="https://twitter.com/GoldBarGames_"
-            color="primary.main"
-            variant={'body1'}
-            target="_blank"
-            fontSize="large"
-          >
-            <TwitterIcon fontSize="large"/> 
-          </Link>
-        </Box>
-        {/* <Box marginRight={1}>
-          <ThemeModeToggler /> 
-        </Box>  */}
-         
-        <Box marginLeft={3}>
-          <Button
-            aria-label="Menu"
-            variant={'contained'}
-            sx={{
-              borderRadius: 2,
-              minWidth: 'auto',
-              padding: 2,
-            }}><b>CONNECT WALLET</b></Button>
-        </Box>           
-        
+      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>         
         <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"

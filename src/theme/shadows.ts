@@ -28,7 +28,7 @@ const shadows = (
   string,
   string,
 ] => {
-  const rgb = themeMode === 'light' ? '#8c98a4' : '#000000';
+  const rgb = themeMode === 'light' ? '#8c98a4' : '#8c98a4';
 
   return [
     'none',

@@ -84,7 +84,7 @@ const GamesSlider = (): JSX.Element => {
         </Typography>
         <Box display="flex" justifyContent={'flex-start'} marginTop={2}>
           <Button
-            variant="contained"
+            variant="outlined"
             color="primary"
             size="large"
             href="/games"

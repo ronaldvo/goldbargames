@@ -71,7 +71,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }: Props)
           />
         </Container>
       </AppBar>
-      <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+      <Box sx={{ display: { xs: 'none', s: 'none', md: 'flex' } }}>
         <Sidebar
           onClose={handleSidebarClose}
           open={open}

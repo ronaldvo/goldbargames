@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import Logo from '../../../../../assets/logo.svg';
+import Logo from '../../../../../assets/logo.png';
 import coinflip from '../../../../../assets/coinflip.png';
 import dice from '../../../../../assets/dice.png';
 import roulette from '../../../../../assets/roulette.png';
@@ -52,10 +52,11 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             }
             height='70px'
             width='auto'
+            padding="3px"
           />
         </Box>
       </Box>
-      <Box paddingX={1} paddingY={4}>
+      <Box paddingX={2} paddingY={4}>
         <Box marginBottom={2}>
           <Button
             size={'large'}
@@ -63,7 +64,7 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             href={'/coinflip'}
             fullWidth
             sx={{
-              justifyContent: 'left',
+              justifyContent: 'center',
               color: '#fff !important',
               backgroundColor:'transparent',
               fontWeight: 400,
@@ -75,7 +76,7 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
               src={
                 coinflip
               }
-              height='50px'
+              height='60px'
               width='auto'
             />
           </Button>
@@ -87,7 +88,7 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             href={'/dice'}
             fullWidth
             sx={{
-              justifyContent: 'left',
+              justifyContent: 'center',
               color: '#fff !important',
               backgroundColor:'transparent',
               fontWeight: 400,
@@ -111,7 +112,7 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             href={'/roulette'}
             fullWidth
             sx={{
-              justifyContent: 'left',
+              justifyContent: 'center',
               color: '#fff !important',
               backgroundColor:'transparent',
               fontWeight: 400,
@@ -123,7 +124,7 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
               src={
                 roulette
               }
-              height='50px'
+              height='60px'
               width='auto'
             />
           </Button>

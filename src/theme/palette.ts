@@ -36,8 +36,8 @@ export const light = {
 export const dark = {
   alternate: {
     //main: '#1a2138',
-    main: '#2C2F33',    
-    dark: '#2C2F33',
+    main: '#0c111e',    
+    dark: '#0c111e',
   },
   cardShadow: 'rgba(0, 0, 0, .11)',
   common: {
@@ -63,9 +63,9 @@ export const dark = {
   },
   divider: 'rgba(255, 255, 255, 0.12)',
   background: {
-    paper: '#2C2F33',
-    default: '#2C2F33',
-    level2: '#2C2F33',
-    level1: '#2C2F33',
+    paper: '#0d111e',
+    default: '#0c111e',
+    level2: '#0c111e',
+    level1: '#0c111e',
   },
 };

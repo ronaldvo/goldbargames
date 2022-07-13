@@ -11,62 +11,75 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import SolIcon from '../../assets/SOL.png';
+
+import CoinFlip from '../../assets/coinflip.png';
+import Roulette from '../../assets/roulette.png';
+import Dice from '../../assets/dice.png';
+
 const mock = [
   {
     feedback:
-      'Got rugged by the federal reserve!',
+      'flipped and got 0.25 sol rugged by the fed!',
     name: 'ECsB...cinc',
     title: 'Coin Flip',
-    avatar: SolIcon,
+    avatar: CoinFlip,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Tripled their bet of 0.25 sol to 0.75 sol!',
+      'played roulette and tripled their bet to 0.75 sol!',
     name: 'AKfT...fjts',
     title: 'Roulette',
-    avatar: SolIcon,
+    avatar: Roulette,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Doubled their bet of 0.5 sol to 1 sol!',
+      'rolled dice and doubled their bet to 1 sol!',
     name: 'QHjR...htnf',
     title: 'Dice',
-    avatar: SolIcon,
+    avatar: Dice,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Got rugged by the federal reserve!',
+      'flipped and got 0.05 sol rugged by the fed!',
     name: 'ECsB...cinc',
     title: 'Coin Flip',
-    avatar: SolIcon,
+    avatar: CoinFlip,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Tripled their bet of 0.25 sol to 0.75 sol!',
+      'played roulette and tripled their bet to 0.75 sol!',
     name: 'AKfT...fjts',
     title: 'Roulette',
-    avatar: SolIcon,
+    avatar: Roulette,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Tripled their bet of 0.25 sol to 0.75 sol!',
+      'played roulette and tripled their bet to 0.75 sol!',
     name: 'AKfT...fjts',
     title: 'Roulette',
-    avatar: SolIcon,
+    avatar: Roulette,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Doubled their bet of 0.5 sol to 1 sol!',
+      'rolled dice and doubled their bet to 1 sol!',
     name: 'QHjR...htnf',
     title: 'Dice',
-    avatar: SolIcon,
+    avatar: Dice,
+    time: '1 second ago'
   },
   {
     feedback:
-      'Got rugged by the federal reserve!',
+      'flipped and got 1 sol rugged by the fed!',
     name: 'ECsB...cinc',
     title: 'Coin Flip',
-    avatar: SolIcon,
+    avatar: CoinFlip,
+    time: '1 second ago'
   },    
 ];
 
@@ -75,20 +88,20 @@ const Reviews = (): JSX.Element => {
 
   const sliderOpts = {
     dots: false,
-    vertical: false,
+    vertical: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
-    rtl: false,
+    rtl: true,
     autoplay: true,
     autoplaySpeed: 2000,
   };
 
   return (
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
-      <Box width={1}>
+      <Box width={0.7}>
         <Slider {...sliderOpts}>
           {mock.map((item, i) => (
             <Box key={i}>
@@ -109,12 +122,29 @@ const Reviews = (): JSX.Element => {
                     alignItems: 'left',
                   }}
                 >
-                  <Typography align={'left'}>
+                  {/* <Typography align={'left'}>
+                    <ListItemAvatar>
+                      <Avatar src={item.avatar} />
+                    </ListItemAvatar>                 
                     {item.feedback}
-                  </Typography>
+                  </Typography> */}
+                  <ListItem component="div" disableGutters sx={{ padding: 0 }}>
+                    <ListItemAvatar>
+                      <Avatar src={item.avatar} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      sx={{ margin: 0 }}
+                      primary={item.name + ' ' + item.feedback}
+                      secondary={item.title}
+                    />
+                  </ListItem>
+
+                  <Typography align={'right'}>
+                    {item.time}
+                  </Typography>                  
                 </CardContent>
                 <Box flexGrow={1} />
-                <CardActions sx={{ paddingBottom: 2 }}>
+                {/* <CardActions sx={{ paddingBottom: 2 }}>
                   <ListItem component="div" disableGutters sx={{ padding: 0 }}>
                     <ListItemAvatar>
                       <Avatar src={item.avatar} />
@@ -125,7 +155,7 @@ const Reviews = (): JSX.Element => {
                       secondary={item.title}
                     />
                   </ListItem>
-                </CardActions>
+                </CardActions> */}
               </Box>
             </Box>
           ))}
