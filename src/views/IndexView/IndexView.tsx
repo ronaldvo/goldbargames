@@ -10,7 +10,8 @@ import {
   GoldBarGames,
   Founders,
   Reviews,
-  GamesSlider
+  GamesSlider,
+  GamesIconList
 } from './components';
 
 const IndexView = (): JSX.Element => {
@@ -21,12 +22,13 @@ const IndexView = (): JSX.Element => {
         <Container>
           <GoldBarGames />
         </Container>   
-        <Container>
+        <Container marginTop={-6}>
           <Reviews />
         </Container>            
         <Container>
           <GamesSlider />
-        </Container>                               
+        </Container>     
+                                   
         {/* <Container>
           <Grid container spacing={2}>
             <Grid

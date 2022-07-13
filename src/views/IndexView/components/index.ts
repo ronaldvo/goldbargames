@@ -4,3 +4,4 @@ export { default as Founders } from './Founders';
 export { default as GoldBarGames } from './GoldBarGames';
 export { default as Reviews } from './Reviews';
 export { default as GamesSlider } from './GamesSlider';
+export { default as GamesIconList } from './GamesIconList';

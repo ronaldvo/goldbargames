@@ -118,7 +118,7 @@ const GamesSlider = (): JSX.Element => {
       >
         <Slider {...sliderOpts}>
           {mock.map((item, i) => (
-            <Box key={i} padding={{ xs: 1, md: 2, lg: 3 }}>
+            <Box key={i} padding={{ xs: 1, md: 2, lg: 3 }} boxShadow={0}>
               <Box
                 display={'block'}
                 width={1}
@@ -133,18 +133,21 @@ const GamesSlider = (): JSX.Element => {
               >
                 <Box
                   component={Card}
+                  variant="outlined"
+                  bgcolor={'background.card'}
                   width={1}
                   height={1}
                   display={'flex'}
                   flexDirection={'column'}
-                  sx={{ backgroundImage: 'none' }}
+                  sx={{ backgroundImage: 'none', padding: 3 }}
                 >
                   <CardMedia
                     title={item.title}
                     image={item.media}
                     sx={{
                       position: 'relative',
-                      height: { xs: 240, sm: 340, md: 280 },
+                      height: { xs: 240, sm: 340, md: 290 },
+                      width: 'auto',
                       overflow: 'hidden',
                     }}
                   >
@@ -152,12 +155,12 @@ const GamesSlider = (): JSX.Element => {
                       component={'svg'}
                       preserveAspectRatio="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
+                      x="5px"
+                      y="5px"
                       viewBox="0 0 1921 273"
                       sx={{
                         position: 'absolute',
-                        height: '200px',
+                        height: '250px',
                         width: 'auto',
                         left: 0,
                         bottom: 0,
@@ -177,9 +180,9 @@ const GamesSlider = (): JSX.Element => {
                     >
                       {item.title}
                     </Typography>
-                    <Typography align={'left'} color={'text.secondary'}>
+                    {/* <Typography align={'left'} color={'text.secondary'}>
                       {item.subtitle}
-                    </Typography>
+                    </Typography> */}
                   </CardContent>
                   <Box flexGrow={1} />
                   <CardActions sx={{ justifyContent: 'flex-end' }}>

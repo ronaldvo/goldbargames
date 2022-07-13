@@ -67,5 +67,6 @@ export const dark = {
     default: '#0c111e',
     level2: '#0c111e',
     level1: '#0c111e',
+    card: '#171b27',
   },
 };

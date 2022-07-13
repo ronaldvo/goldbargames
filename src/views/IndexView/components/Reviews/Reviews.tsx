@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import SolIcon from '../../assets/SOL.png';
-
+import Divider from '@mui/material/Divider';
 import CoinFlip from '../../assets/coinflip.png';
 import Roulette from '../../assets/roulette.png';
 import Dice from '../../assets/dice.png';
@@ -96,12 +96,12 @@ const Reviews = (): JSX.Element => {
     arrows: false,
     rtl: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
   };
 
   return (
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
-      <Box width={0.7}>
+      <Box width={0.7} bgcolor={'background.card'}>
         <Slider {...sliderOpts}>
           {mock.map((item, i) => (
             <Box key={i}>
@@ -113,6 +113,7 @@ const Reviews = (): JSX.Element => {
                 flexDirection={'column'}
                 alignItems={'left'}
                 boxShadow={0}
+                
                 sx={{ bgcolor: 'transparent', backgroundImage: 'none' }}
               >
                 <CardContent
@@ -140,7 +141,7 @@ const Reviews = (): JSX.Element => {
                   </ListItem>
 
                   <Typography align={'right'}>
-                    {item.time}
+                    <small>{item.time}</small>
                   </Typography>                  
                 </CardContent>
                 <Box flexGrow={1} />
@@ -157,7 +158,9 @@ const Reviews = (): JSX.Element => {
                   </ListItem>
                 </CardActions> */}
               </Box>
+              <Divider />
             </Box>
+            
           ))}
         </Slider>
       </Box>
