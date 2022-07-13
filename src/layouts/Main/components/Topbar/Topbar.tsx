@@ -152,7 +152,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             }}><b>About</b></Button>
         </Box>        
       </Box>      
-      <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+      <Box sx={{ display: { xs: 'none', s: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box marginLeft={3} paddingTop={0.7}>
           <Link
             underline="none"
@@ -202,9 +202,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
             />
           </Link>
         </Box>                
-        {/* <Box marginLeft={3}>
-          <ThemeModeToggler />
-        </Box>   */}
         <Box marginLeft={2}>
           <Button
             aria-label="Menu"
@@ -213,10 +210,18 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }: Props): JSX.Eleme
               borderRadius: 2,
               minWidth: 'auto',
             }}><b>CONNECT WALLET</b></Button>
-        </Box>         
-                             
+        </Box>                       
       </Box>
-      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>         
+      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>  
+        <Box marginRight={2}>
+          <Button
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+            }}><b>CONNECT WALLET</b></Button>
+        </Box>                
         <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"
