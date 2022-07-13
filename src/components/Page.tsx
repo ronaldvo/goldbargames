@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import getTheme from 'theme';
 import AOS from 'aos';
@@ -65,7 +66,18 @@ export default function Page({ children }: Props): JSX.Element {
     <ThemeProvider theme={getTheme(themeMode, themeToggler)}>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
-      <Paper elevation={0}>{children}</Paper>
+      <Box>
+        <Paper elevation={0}        
+          sx={{
+            marginLeft: '120px',
+            display: { xs: 'none', s: 'none', md: 'block' }
+          }}>{children}</Paper>
+        <Paper elevation={0}        
+          sx={{
+            display: { xs: 'block', s: 'block', md: 'none' }
+          }}>{children}</Paper>        
+      </Box>
+
     </ThemeProvider>
   );
 }
